@@ -108,7 +108,9 @@ dist
 # dependencies
 /node_modules
 /.pnp
+/.husky
 .pnp.js
+/.vscode
 
 # testing
 /coverage
