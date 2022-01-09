@@ -1,19 +1,17 @@
 import PropTypes from "prop-types";
-import StatisticsItem from '../StatisticsItem/StatisticsItem';
+import StatisticsItem from "./StatisticsItem/StatisticsItem";
+import { StatisticsSection, Title, StatList } from "./Statistics.styled";
 
-export const Statistics = ({title, stats}) =>{
-return (
-  <section className="statistics">
-    {title && <h2 className="title">{title}</h2>} 
-    <ul className="stat-list">
-    <StatisticsItem stats={stats}/> 
-    </ul> 
-  </section>
-)
-}
-
-
-
+export const Statistics = ({ title, stats }) => {
+  return (
+    <StatisticsSection>
+      {title && <Title>{title}</Title>}
+      <StatList>
+        <StatisticsItem stats={stats} />
+      </StatList>
+    </StatisticsSection>
+  );
+};
 
 Statistics.propTypes = {
   title: PropTypes.string,

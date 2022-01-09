@@ -51,6 +51,13 @@ export const StatsItem = styled.li`
   color: white;
   flex: 1;
   background-color: ${getRangomColor};
+  color: ${getRangomColor};
+  transition: all 0.5s ease-out;
+
+  :hover {
+    background: black;
+    color: white;
+  }
 `;
 
 function getRangomColor() {

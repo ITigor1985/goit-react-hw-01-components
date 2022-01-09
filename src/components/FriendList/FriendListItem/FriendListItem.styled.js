@@ -6,9 +6,10 @@ export const Item = styled.li`
   display: flex;
 
   align-items: center;
-  width: 250px;
+  width: 45%;
   height: 100px;
   box-shadow: 10px 5px 5px grey;
+  transition: all 0.5s ease-out;
   ::before {
     content: "";
     position: absolute;
@@ -19,6 +20,11 @@ export const Item = styled.li`
     height: 10px;
     border-radius: 50%;
     background-color: ${(props) => (props.isOnline ? "green" : "red")};
+  }
+  :hover {
+    box-shadow: none;
+    background-color: ${(props) => (props.isOnline ? "green" : "red")};
+    color: white;
   }
 `;
 
