@@ -12,7 +12,7 @@ import {
   StatsItem,
 } from "./Profyle.styled";
 
-const Profile = ({ user: { username, tag, location, avatar, stats } }) => {
+const Profile = ({ avatar, username, tag, location, stats }) => {
   return (
     <UserCard>
       <Description>

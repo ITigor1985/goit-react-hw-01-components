@@ -2,17 +2,17 @@ import PropTypes from "prop-types";
 import { StatItem } from "./StatisticsItem.styled";
 
 const StatisticsItem = ({ stats }) => {
-  return stats.map((state) => (
-    <StatItem key={state.id}>
-      <span className="label">{state.label}</span>
-      <span className="percentage">{state.percentage}%</span>
+  return stats.map(({ id, label, percentage }) => (
+    <StatItem key={id}>
+      <span className="label">{label}</span>
+      <span className="percentage">{percentage}%</span>
     </StatItem>
   ));
 };
 export default StatisticsItem;
 
 StatisticsItem.propTypes = {
-  data: PropTypes.arrayOf(
+  stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
